@@ -148,6 +148,19 @@ data/
 
 ---
 
+##Run the Pipeline
+
+Run each step sequentially from the project root:
+
+python -m pipeline.step1_scrape
+python -m pipeline.step2_clean
+python -m pipeline.step3_enrich
+
+
+(Optional CSV export)
+
+python -m pipeline.step4_export_csv
+
 ## 7. Assumptions & Limitations
 - Not all listings provide complete descriptions or pricing
 - Region and era inference may be limited by available metadata
@@ -173,4 +186,5 @@ The current design already separates concerns cleanly, making scaling straightfo
 
 This pipeline demonstrates a practical approach to building high-quality structured datasets from public web sources.  
 It emphasizes correctness, traceability, and conservative reasoning over aggressive inference, ensuring the final dataset is suitable for real-world use.
+
 
