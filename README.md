@@ -130,14 +130,21 @@ JSON was chosen for flexibility and ease of integration with downstream systems.
 ## 6. Code Structure
 pipeline/
 ├── step1_scrape.py # Data collection
+
 ├── step2_clean.py # Cleaning & normalization
+
 ├── step3_enrich.py # Attribute enrichment
+
 ├── step4_export_csv.py # Optional CSV export
+
 
 data/
 ├── raw/
+
 ├── clean/
+
 └── final/
+
 
 ---
 
@@ -166,3 +173,4 @@ The current design already separates concerns cleanly, making scaling straightfo
 
 This pipeline demonstrates a practical approach to building high-quality structured datasets from public web sources.  
 It emphasizes correctness, traceability, and conservative reasoning over aggressive inference, ensuring the final dataset is suitable for real-world use.
+
